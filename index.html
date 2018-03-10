@@ -7,6 +7,13 @@
         /* tilfoej styles og animationer her */
         body {
             /*background: #000;*/
+            font-family: sans-serif;
+        }
+        
+        article {
+            overflow: hidden;
+            width: 502px;
+            height: 502px;
         }
         
         .stjerne {
@@ -16,20 +23,22 @@
         }
         
         #myCanvas {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            border: 1px solid black;
+            background-color: darkslateblue;
         }
     </style>
 </head>
 <body>
-    
-        <canvas id="myCanvas"></canvas>
+   <header>
+       <h1>The robot and the dots</h1>
+   </header>
+    <article>
+        <canvas width="500" height="500" id="myCanvas"></canvas>
         <div id="robot"></div>
-        
-        
-        <p id="info"></p>
-    
+    </article>
+    <article>
+         <p id="info">Flyt med: w,a,s,d (kun d virker)</p>
+    </article>
     
     <!-- jQuery hentes her -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -49,8 +58,8 @@
             console.log( "jQ ready!" );
             
             // speed, position
-            var top = 100,
-                speed = 20;
+            var top = 300,
+                speed = 50;
          
             // vis robot paa skaerm
             $('#robot').css({
@@ -84,42 +93,33 @@
                 
             }); 
             
-        // detect position
-            
-        // detect collision
-            
-        // canvas
-            
         }); // ends jQ doc ready
+        
+        /**
+         * Vanilla Js: Canvas
+         ** /
         
         function tal( n ) {
             // returnerer rnd * n
             return Math.floor( Math.random()*n );
         }
         
-        function cirkel(x,y,tal) {
-            var x = Math.floor( Math.random()*100 );
+        function cirkel(x,y) {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d"); 
-            
-            ctx.fillStyle = 'green';
-      ctx.fill();
-      ctx.lineWidth = 5;
-      ctx.strokeStyle = '#003300';
-      ctx.stroke();
-    </script>
-  </body>
-</html>      
-            }
-        
-        for (var i=5;i<30;i++) {
-            console.log('tegner cirkel');
-            cirkel(tal(), tal());
+            ctx.beginPath();
+            ctx.arc(x,y, tal( 100 ) ,0,2*Math.PI);
+            ctx.lineWidth = 0;
+            ctx.strokeStyle = "#000";
+            ctx.fillStyle = "rgba( 255,0,0, .25 )";
+            ctx.fill();
+            ctx.stroke();
         }
+        
+        for (var x=0;x<=30;x++) {
+            cirkel( tal(500),tal(500) );    
+        }
+        
     </script>
   </body>
-</html>      
-        
-    
-</body>
 </html>
