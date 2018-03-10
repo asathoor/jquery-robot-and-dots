@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Robot</title>
+    <style>
+        /* tilfoej styles og animationer her */
+        body {
+            /*background: #000;*/
+        }
+        
+        .stjerne {
+            width: 10;
+            height: 10;
+            background: #fff;
+        }
+        
+        #myCanvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+        <canvas id="myCanvas"></canvas>
+        <div id="robot"></div>
+        
+        
+        <p id="info"></p>
+    
+    
+    <!-- jQuery hentes her -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <!-- herfra min jQuery kode -->
+    <script>
+    /**
+     * Kiosk eksempel
+     * Tanken er et interface til en browser i "kiosk mode"
+     * Husk: det er mere elegant med scripts i separat browser
+     **/
+        var robot = "Robot.png";
+        
+        // shorthand for document ready function
+        $(function() {
+            
+            console.log( "jQ ready!" );
+            
+            // speed, position
+            var top = 100,
+                speed = 20;
+         
+            // vis robot paa skaerm
+            $('#robot').css({
+              'position' : 'absolute',
+              'top' : top,
+              'width' : '256px',
+              'height' : '256px',
+              'background color' : 'red',
+              'z-index' : '900'
+             }).html(
+                  '<img src="billeder/' 
+                   + robot 
+                   + '" alt="Robot">');
+            
+            // flyt robotten med w a s d
+            // tip: http://keycode.info/
+            $(document).keydown(function(e) {
+                switch (e.which) {
+                    // d pressed
+                    case 68:
+                        console.log('press:d');
+                        $('#robot').stop().animate({
+                            left: '+=' + speed
+                        }); //left arrow key
+                        break;
+
+                        // w, a, s ... herfra
+                }
+                
+                
+                
+            }); 
+            
+        // detect position
+            
+        // detect collision
+            
+        // canvas
+            
+        }); // ends jQ doc ready
+        
+        function tal( n ) {
+            // returnerer rnd * n
+            return Math.floor( Math.random()*n );
+        }
+        
+        function cirkel(x,y,tal) {
+            var x = Math.floor( Math.random()*100 );
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d"); 
+            
+            ctx.fillStyle = 'green';
+      ctx.fill();
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#003300';
+      ctx.stroke();
+    </script>
+  </body>
+</html>      
+            }
+        
+        for (var i=5;i<30;i++) {
+            console.log('tegner cirkel');
+            cirkel(tal(), tal());
+        }
+    </script>
+  </body>
+</html>      
+        
+    
+</body>
+</html>

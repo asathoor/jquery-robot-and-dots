@@ -1,0 +1,17 @@
+{
+  "name": "kiosk",
+  "description": "kiosk mode sample",
+  "main": "index.js",
+  "authors": [
+    "Per Thykjaer Jensen (PETJ) <asathoor@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
