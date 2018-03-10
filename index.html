@@ -8,11 +8,18 @@
         body {
             /*background: #000;*/
             font-family: sans-serif;
+            color: #fff;
+            
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+            background: #45484d; /* Old browsers */
+            background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
         }
         
         article {
             overflow: hidden;
-            width: 502px;
             height: 502px;
         }
         
@@ -24,7 +31,13 @@
         
         #myCanvas {
             border: 1px solid black;
-            background-color: darkslateblue;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
+            background: #a7cfdf; /* Old browsers */
+            background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
+            
         }
     </style>
 </head>
@@ -32,10 +45,10 @@
    <header>
        <h1>The robot and the dots</h1>
    </header>
-    <article>
-        <canvas width="500" height="500" id="myCanvas"></canvas>
+    
+        <canvas id="myCanvas" width="900" height="500"></canvas>
         <div id="robot"></div>
-    </article>
+    
     <article>
          <p id="info">Flyt med: w,a,s,d (kun d virker)</p>
     </article>
@@ -44,82 +57,6 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     
     <!-- herfra min jQuery kode -->
-    <script>
-    /**
-     * Kiosk eksempel
-     * Tanken er et interface til en browser i "kiosk mode"
-     * Husk: det er mere elegant med scripts i separat browser
-     **/
-        var robot = "Robot.png";
-        
-        // shorthand for document ready function
-        $(function() {
-            
-            console.log( "jQ ready!" );
-            
-            // speed, position
-            var top = 300,
-                speed = 50;
-         
-            // vis robot paa skaerm
-            $('#robot').css({
-              'position' : 'absolute',
-              'top' : top,
-              'width' : '256px',
-              'height' : '256px',
-              'background color' : 'red',
-              'z-index' : '900'
-             }).html(
-                  '<img src="billeder/' 
-                   + robot 
-                   + '" alt="Robot">');
-            
-            // flyt robotten med w a s d
-            // tip: http://keycode.info/
-            $(document).keydown(function(e) {
-                switch (e.which) {
-                    // d pressed
-                    case 68:
-                        console.log('press:d');
-                        $('#robot').stop().animate({
-                            left: '+=' + speed
-                        }); //left arrow key
-                        break;
-
-                        // w, a, s ... herfra
-                }
-                
-                
-                
-            }); 
-            
-        }); // ends jQ doc ready
-        
-        /**
-         * Vanilla Js: Canvas
-         ** /
-        
-        function tal( n ) {
-            // returnerer rnd * n
-            return Math.floor( Math.random()*n );
-        }
-        
-        function cirkel(x,y) {
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d"); 
-            ctx.beginPath();
-            ctx.arc(x,y, tal( 100 ) ,0,2*Math.PI);
-            ctx.lineWidth = 0;
-            ctx.strokeStyle = "#000";
-            ctx.fillStyle = "rgba( 255,0,0, .25 )";
-            ctx.fill();
-            ctx.stroke();
-        }
-        
-        for (var x=0;x<=30;x++) {
-            cirkel( tal(500),tal(500) );    
-        }
-        
-    </script>
+    <script src="js/robot.js"></script>
   </body>
 </html>
