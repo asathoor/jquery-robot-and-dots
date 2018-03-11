@@ -9,6 +9,13 @@ Either download jQuery from [jQuery.com](http://jquery.com) or use a CDN. Whatev
 
 Draw or download an image of a cute little robot, spaceshipt or similar - preferably as a transparent .png or .svg. Change the `<img src="yourImage.png">` tag. If you see a robot, you're ready to go. You may use this image as an alternative to my primitive robot.
 
+## HTML5 Canvas
+
+* [Canvas Tutorials](https://www.html5canvastutorials.com/)
+* [W3 Canvas](https://www.w3schools.com/html/html5_canvas.asp)
+
+The dots are drawn on a HTML5 canvas element via a JavaScript function. You can use the canvas for ads, images, animations and much more. 
+
 ## Todo List
 
 * Only the d key works - add the w,a,s keys too. Now you're "MaKeyMaKey ready".
