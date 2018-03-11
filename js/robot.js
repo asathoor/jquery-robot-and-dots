@@ -1,7 +1,7 @@
 /**
   * file: robot.js
   **/
-var robot = "myRobot.png";
+const robot = "myRobot.png";
 
 // shorthand for document ready function
 $(function() {
