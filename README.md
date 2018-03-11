@@ -15,3 +15,24 @@ Draw or download an image of a cute little robot, spaceshipt or similar - prefer
 * Finetune the robot position via the `var top =` so that the robot will walk along the bottom line of the browser.
 * Change backgrounds when the robot reach a certain point. Now you can do "scenes" or "levels".
 * Add sounds.
+
+## On your own: .SVG animation by jQuery
+
+The robot is kind of static. You can animate .SVG files via CSS.
+
+* [Animating SVG CSS](https://css-tricks.com/animating-svg-css/)
+
+Since you can add css to HTML, you can use jQuery in order to control your animations. 
+
+You can do something along these lines:
+
+~~~~
+$('#myGroup').css({
+    'animation-name' : 'myAnimation',
+    'animation-duration' : '2000ms',
+    'animation-delay' : '100ms',
+    'animation-timing-function' : 'ease-in-out'
+})
+~~~~
+
+Experiment with animation-control - e.g. trigered by events such as mouse over, clicks or keypress (here's where the MaKeyMaKey will enter your project). 
