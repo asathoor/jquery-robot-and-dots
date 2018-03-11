@@ -1,7 +1,7 @@
 /**
   * file: robot.js
   **/
-var robot = "Robot.png";
+var robot = "myRobot.png";
 
 // shorthand for document ready function
 $(function() {
