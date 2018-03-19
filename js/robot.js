@@ -41,6 +41,7 @@ $(function() {
                 }); //left arrow key
                 
                 // w, a, s ... herfra
+                break;
         }
         
         
