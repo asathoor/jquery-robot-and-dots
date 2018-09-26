@@ -1,62 +1,76 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Robot</title>
-    <style>
-        /* tilfoej styles og animationer her */
-        body {
-            /*background: #000;*/
-            font-family: sans-serif;
-            color: #fff;
-            
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
-            background: #45484d; /* Old browsers */
-            background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
-            background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-            background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-        }
-        
-        article {
-            overflow: hidden;
-            height: 502px;
-        }
-        
-        .stjerne {
-            width: 10;
-            height: 10;
-            background: #fff;
-        }
-        
-        #myCanvas {
-            border: 1px solid black;
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
-            background: #a7cfdf; /* Old browsers */
-            background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
-            
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>The Robot and the Dots</title>
+  <style>
+    /* tilfoej styles og animationer her */
+    body {
+      /*background: #000;*/
+      font-family: sans-serif;
+      color: #fff;
+
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+      background: #45484d;
+      /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%);
+      /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, #45484d 0%, #000000 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#000000', GradientType=1);
+      /* IE6-9 fallback on horizontal gradient */
+    }
+
+    article {
+      overflow: hidden;
+      height: 502px;
+    }
+
+    .stjerne {
+      width: 10;
+      height: 10;
+      background: #fff;
+    }
+
+    #myCanvas {
+      border: 1px solid white;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
+      background: #a7cfdf;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #a7cfdf 0%, #23538a 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #a7cfdf 0%, #23538a 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a7cfdf', endColorstr='#23538a', GradientType=0);
+      /* IE6-9 */
+    }
+  </style>
 </head>
+
 <body>
-   <header>
-       <h1>The robot and the dots</h1>
-   </header>
-    
-        <canvas id="myCanvas" width="900" height="500"></canvas>
-        <div id="robot"></div>
-    
-    <article>
-         <p id="info">Flyt med: w,a,s,d (kun d virker)</p>
-    </article>
-    
-    <!-- jQuery hentes her -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    
-    <!-- herfra min jQuery kode -->
-    <script src="js/robot.js"></script>
-  </body>
+  <header>
+    <h1>The robot and the dots</h1>
+  </header>
+
+  <!-- nb: canvas kræver en bredde og højde, brug gerne inline styles her -->
+  <canvas id="myCanvas" width="900" height="500"></canvas>
+  <div id="robot"></div>
+
+  <article>
+    <p id="info">Flyt med: w,a,s,d (kun d er implementeret! Gå selv videre med resten.)</p>
+  </article>
+
+  <-- JAVASCRIPTS -->
+
+  <!-- jQuery hentes her -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- herfra min jQuery kode -->
+  <script src="js/robot.js"></script>
+</body>
 </html>
