@@ -1,5 +1,6 @@
 /**
  * file: robot.js
+ * purpose: animate by button
  **/
 const robot = 'myRobot.png';
 
